@@ -1409,8 +1409,6 @@
         <a href="#products"><i class="fas fa-box"></i> Products</a>
         <a href="#deal"><i class="fas fa-bolt"></i> Deals</a>
         <a href="#contact"><i class="fas fa-phone"></i> Contact</a>
-        <a href="#quote" id="mobileCartBtn"><i class="fas fa-shopping-cart"></i> Cart <span
-                class="cart-badge">0</span></a>
     </div>
 
     <!-- Menu Backdrop Overlay -->
@@ -1448,19 +1446,19 @@
         // Function to send contact form data to WhatsApp
         function sendWhatsAppMessage(event) {
             event.preventDefault();
-            
+
             // Get form values
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const phone = document.getElementById('phone').value;
             const message = document.getElementById('message').value;
-            
+
             // Format the message for WhatsApp
             const whatsappMessage = `Hello, I would like to contact HSC Cooler:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage: ${message}`;
-            
+
             // Create WhatsApp URL with the message
             const whatsappURL = `https://wa.me/919607832459?text=${encodeURIComponent(whatsappMessage)}`;
-            
+
             // Open WhatsApp in a new tab
             window.open(whatsappURL, '_blank');
         }
